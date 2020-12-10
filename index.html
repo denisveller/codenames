@@ -1,98 +1,124 @@
 <html>
-    <head>
-        <title>
-            Code Names
-        </title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <table>
-            <tr>
-                <th>
-                    <button class="word" id="0" onclick="words[0].cycleState()">w1</button>
-                </th>
-                <th>
-                    <button class="word" id="1" onclick="words[1].cycleState()">w2</button>
-                </th>
-                <th>
-                    <button class="word" id="2" onclick="words[2].cycleState()">w3</button>
-                </th>
-                <th>
-                    <button class="word" id="3" onclick="words[3].cycleState()">w4</button>
-                </th>
-                <th>
-                    <button class="word" id="4" onclick="words[4].cycleState()">w5</button>
+
+<head>
+    <title>
+        Code Names
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button class='playerBTN blue' onclick="cards(0)">Blue First</button>
+    <button class='playerBTN red right' onclick="cards(1)">Red First</button>
+    <div class="images">
+        <img src="blue.jpg" class="cards" id="b0">
+        <img src="blue.jpg" class="cards" id="b1">
+        <img src="blue.jpg" class="cards" id="b2">
+        <img src="blue.jpg" class="cards" id="b3">
+        <img src="blue.jpg" class="cards" id="b4">
+        <img src="blue.jpg" class="cards" id="b5">
+        <img src="blue.jpg" class="cards" id="b6">
+        <img src="blue.jpg" class="cards" id="b7">
+        <img src="blue.jpg" class="cards" id="b8">
+        <img src="red.jpg" class="cards right" id="r0">
+        <img src="red.jpg" class="cards right" id="r1">
+        <img src="red.jpg" class="cards right" id="r2">
+        <img src="red.jpg" class="cards right" id="r3">
+        <img src="red.jpg" class="cards right" id="r4">
+        <img src="red.jpg" class="cards right" id="r5">
+        <img src="red.jpg" class="cards right" id="r6">
+        <img src="red.jpg" class="cards right" id="r7">
+        <img src="red.jpg" class="cards right" id="r8">
+    </div>
+    <table>
+        <tr>
+            <th>
+                <button class="word" id="0" onclick="words[0].cycleState()">w1</button>
+            </th>
+            <th>
+                <button class="word" id="1" onclick="words[1].cycleState()">w2</button>
+            </th>
+            <th>
+                <button class="word" id="2" onclick="words[2].cycleState()">w3</button>
+            </th>
+            <th>
+                <button class="word" id="3" onclick="words[3].cycleState()">w4</button>
+            </th>
+            <th>
+                <button class="word" id="4" onclick="words[4].cycleState()">w5</button>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <button class="word" id="5" onclick="words[5].cycleState()">w6</button>
+            </th>
+            <th>
+                <button class="word" id="6" onclick="words[6].cycleState()">w7</button>
+            </th>
+            <th>
+                <button class="word" id="7" onclick="words[7].cycleState()">w8</button>
+            </th>
+            <th>
+                <button class="word" id="8" onclick="words[8].cycleState()">w9</button>
+            </th>
+            <th>
+                <button class="word" id="9" onclick="words[9].cycleState()">w10</button>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <button class="word" id="10" onclick="words[10].cycleState()">w11</button>
+            </th>
+            <th>
+                <button class="word" id="11" onclick="words[11].cycleState()">w12</button>
+            </th>
+            <th>
+                <button class="word" id="12" onclick="words[12].cycleState()">w13</button>
+            </th>
+            <th>
+                <button class="word" id="13" onclick="words[13].cycleState()">w14</button>
+            </th>
+            <th>
+                <button class="word" id="14" onclick="words[14].cycleState()">w15</button>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <button class="word" id="15" onclick="words[15].cycleState()">
+                    <w16 /button>
+            </th>
+            <th>
+                <button class="word" id="16" onclick="words[16].cycleState()">w17</button>
+            </th>
+            <th>
+                <button class="word" id="17" onclick="words[17].cycleState()">w18</button>
+            </th>
+            <th>
+                <button class="word" id="18" onclick="words[18].cycleState()">w19</button>
+            </th>
+            <th>
+                <button class="word" id="19" onclick="words[19].cycleState()"">w20</button>
                 </th>
             </tr>
             <tr>
                 <th>
-                    <button class="word" id="5" onclick="words[5].cycleState()">w6</button>
-                </th>
-                <th>
-                    <button class="word" id="6" onclick="words[6].cycleState()">w7</button>
-                </th>
-                <th>
-                    <button class="word" id="7" onclick="words[7].cycleState()">w8</button>
-                </th>
-                <th>
-                    <button class="word" id="8" onclick="words[8].cycleState()">w9</button>
-                </th>
-                <th>
-                    <button class="word" id="9" onclick="words[9].cycleState()">w10</button>
-                </th>
-            </tr>
-            <tr>
-                <th>
-                    <button class="word" id="10" onclick="words[10].cycleState()">w11</button>
-                </th>
-                <th>
-                    <button class="word" id="11" onclick="words[11].cycleState()">w12</button>
-                </th>
-                <th>
-                    <button class="word" id="12" onclick="words[12].cycleState()">w13</button>
-                </th>
-                <th>
-                    <button class="word" id="13" onclick="words[13].cycleState()">w14</button>
-                </th>
-                <th>
-                    <button class="word" id="14" onclick="words[14].cycleState()">w15</button>
-                </th>
-            </tr>
-            <tr>
-                <th>
-                    <button class="word" id="15" onclick="words[15].cycleState()"><w16/button>
-                </th>
-                <th>
-                    <button class="word" id="16" onclick="words[16].cycleState()">w17</button>
-                </th>
-                <th>
-                    <button class="word" id="17" onclick="words[17].cycleState()">w18</button>
-                </th>
-                <th>
-                    <button class="word" id="18" onclick="words[18].cycleState()">w19</button>
-                </th>
-                <th>
-                    <button class="word" id="19" onclick="words[19].cycleState()"">w20</button>
-                </th>
-            </tr>
-            <tr>
-                <th>
-                    <button class="word" id="20" onclick="words[20].cycleState()">w21</button>
-                </th>
-                <th>
-                    <button class="word" id="21" onclick="words[21].cycleState()">w22</button>
-                </th>
-                <th>
-                    <button class="word" id="22" onclick="words[22].cycleState()">w23</button>
-                </th>
-                <th>
-                    <button class="word" id="23" onclick="words[23].cycleState()">w24</button>
-                </th>
-                <th>
-                    <button class="word" id="w24" onclick="words[24].cycleState()">w25</button>
-                </th>
-            </tr>
-        </table>
-        <script src="script.js"></script>
-    </body>
+                    <button class=" word" id="20" onclick="words[20].cycleState()">w21</button>
+            </th>
+            <th>
+                <button class="word" id="21" onclick="words[21].cycleState()">w22</button>
+            </th>
+            <th>
+                <button class="word" id="22" onclick="words[22].cycleState()">w23</button>
+            </th>
+            <th>
+                <button class="word" id="23" onclick="words[23].cycleState()">w24</button>
+            </th>
+            <th>
+                <button class="word" id="w24" onclick="words[24].cycleState()">w25</button>
+            </th>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+</body>
+
 </html>
