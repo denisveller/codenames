@@ -22,18 +22,21 @@ class Word{
         switch (this.state){
             case 0:
                 this.self.style.backgroundColor = "white";
+                this.self.style.color= 'rgba(0,0,0,1)';
                 break;
             case 1:
-                this.self.style.backgroundColor = "blue";
+                this.self.style.backgroundImage= "url('blue.jpg')";
+                this.self.style.color= 'rgba(0,0,0,0)';
                 break;
             case 2:
-                this.self.style.backgroundColor = "red";
+                this.self.style.backgroundImage= "url('red.jpg')";
                 break;
             case 3:
-                this.self.style.backgroundColor = "yellow";
+                this.self.style.backgroundImage= "url('neutral.jpeg')";
                 break;
             case 4:
                 this.self.style.backgroundColor = "black";
+                this.self.style.backgroundImage= "url('')";
                 break;
         }
 
