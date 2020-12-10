@@ -1,9 +1,10 @@
-const fileURL = "";
+const fileURL = "https://denisveller.github.io/codenames/nounlist.txt";
+var file = [];
+var uArr = [];
 fetch(fileURL)
     .then( r => r.text())
-    .then( t => console.log(t));   
+    .then( t => file = t.toString().split('\n'));
 class Word{
-
     constructor(id){
         this.state = 0;
         this.id = id;
@@ -39,6 +40,10 @@ class Word{
     }
 
 }
+console.log(file);
+while (file.length === 1){
+    console.log("twiddling thumbs");
+}
 var wordsOnThePage =  document.getElementsByClassName("word");
 var words = [];
 for(var i = 0; i<wordsOnThePage.length; i++){
@@ -47,7 +52,11 @@ for(var i = 0; i<wordsOnThePage.length; i++){
 }
 
 function randNouns(){
-    const n = 6801;
-    var r = Math.ceil(Math.random()*n);
-
+    var r = Math.floor(Math.random()*file.length);
+    /*while (uArr.includes(r)){
+        r = Math.floor(Math.random()*file.length);
+    }*/
+    uArr.push(r);
+    var w = file[r];
+    return w;
 }
