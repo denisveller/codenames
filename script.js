@@ -100,6 +100,10 @@ function drawcards(){
         var temp = "r" + i;
         document.getElementById(temp).style.display = 'block';
     }
+    document.getElementById('nb').style.display = 'block';
+    document.getElementById('nb').innerHTML = blue;
+    document.getElementById('nr').style.display = 'block';
+    document.getElementById('nr').innerHTML = red;
 }
 function assign(file) {
     var wordsOnThePage = document.getElementsByClassName("word");

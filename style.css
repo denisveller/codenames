@@ -49,6 +49,16 @@ th{
     float: left;
     border: 1px black solid;
 }
+.n{
+    display: none;
+    float: left;
+    font-size: 20pt;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 0%;
+    margin-bottom: 0%;
+    vertical-align: middle; 
+}
 .right{
     float: right;
 }
