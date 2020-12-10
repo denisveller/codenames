@@ -1,14 +1,14 @@
 const fileURL = "https://denisveller.github.io/codenames/nounlist.txt";
-var file = [];
-var uArr = [];
+let uArr = [];
 fetch(fileURL)
     .then( r => r.text())
-    .then( t => file = t.toString().split('\n'));
+    .then( t => assign(t.toString().split('\n')));
+
 class Word{
-    constructor(id){
+    constructor(id, file){
         this.state = 0;
         this.id = id;
-        this.noun = randNouns();
+        this.noun = this.randNouns(file);
         this.self = document.getElementById(this.id);
     }
     getWord(){
@@ -39,24 +39,37 @@ class Word{
 
     }
 
-}
-console.log(file);
-while (file.length === 1){
-    console.log("twiddling thumbs");
-}
-var wordsOnThePage =  document.getElementsByClassName("word");
-var words = [];
-for(var i = 0; i<wordsOnThePage.length; i++){
-    words.push(new Word(wordsOnThePage[i].id))
-    words[i].getWord();
-}
+     randNouns(file){
+        var r = Math.floor(Math.random()*file.length);
+        /*while (uArr.includes(r)){
+            r = Math.floor(Math.random()*file.length);
+        }*/
+        uArr.push(r);
+        var w = file[r];
+        return w;
+    }
 
-function randNouns(){
-    var r = Math.floor(Math.random()*file.length);
-    /*while (uArr.includes(r)){
-        r = Math.floor(Math.random()*file.length);
-    }*/
-    uArr.push(r);
-    var w = file[r];
-    return w;
+}
+var words = [];
+function assign(file){
+    console.log(file);
+
+    while (file.length === 1){
+        console.log("twiddling thumbs");
+    }
+    var wordsOnThePage =  document.getElementsByClassName("word");
+    for(var i = 0; i<wordsOnThePage.length; i++){
+        words.push(new Word(wordsOnThePage[i].id, file))
+        words[i].getWord();
+    }
+    
+    // function randNouns(){
+    //     var r = Math.floor(Math.random()*file.length);
+    //     /*while (uArr.includes(r)){
+    //         r = Math.floor(Math.random()*file.length);
+    //     }*/
+    //     uArr.push(r);
+    //     var w = file[r];
+    //     return w;
+    // }
 }
