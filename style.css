@@ -4,7 +4,7 @@ table{
 }
 th{
     width: 20%;
-    height: 20%;
+    max-height: 18%;
 }
 .word{
     border: 2px black solid;

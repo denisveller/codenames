@@ -26,11 +26,13 @@ class Word {
             case 0:
                 this.self.style.backgroundColor = "wheat";
                 this.self.style.color = 'rgba(0,0,0,1)';
+                this.self.style.fontSize = '';
                 this.corner.style.display = "none";
                 break;
             case 1:
                 this.self.style.backgroundImage = "url('blue.jpg')";
                 this.self.style.color = 'rgba(255,255,255,0)';
+                this.self.style.fontSize = '1pt';
                 played[0] = played[0] + 1;
                 drawcards();
                 this.corner.style.display = "block";
