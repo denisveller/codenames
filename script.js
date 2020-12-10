@@ -10,9 +10,11 @@ class Word {
         this.id = id;
         this.noun = this.randNouns(file);
         this.self = document.getElementById(this.id);
+        this.getWord();
+        this.corner = document.getElementById(this.id+"c");
     }
     getWord() {
-        var temp = "<p>" + this.noun + "</p>" + "<p class='upside-down'><i>" + this.noun + "</i></p>" + "<p class='corner'>"+this.noun+'</p>';
+        var temp = "<p>" + this.noun + "</p>" + "<p class='upside-down'><i>" + this.noun + "</i></p>" + "<p class='corner' id='"+this.id+"c'>"+this.noun+'</p>';
         this.self.innerHTML = temp;
     }
     cycleState() {
@@ -24,12 +26,14 @@ class Word {
             case 0:
                 this.self.style.backgroundColor = "wheat";
                 this.self.style.color = 'rgba(0,0,0,1)';
+                this.corner.style.display = "none";
                 break;
             case 1:
                 this.self.style.backgroundImage = "url('blue.jpg')";
                 this.self.style.color = 'rgba(255,255,255,0)';
                 played[0] = played[0] + 1;
                 drawcards();
+                this.corner.style.display = "block";
                 break;
             case 2:
                 played[0] = played[0] - 1;
@@ -85,9 +89,7 @@ function reset(){
 function drawcards(){
     reset();
     var blue = card[0] - played[0];
-    console.log(blue);
     var red = card[1] - played[1];
-    console.log(red);
     for (i = 0; i < blue; i++){
         var temp = "b" + i;
         document.getElementById(temp).style.display = 'block';
@@ -101,6 +103,5 @@ function assign(file) {
     var wordsOnThePage = document.getElementsByClassName("word");
     for (var i = 0; i < wordsOnThePage.length; i++) {
         words.push(new Word(wordsOnThePage[i].id, file))
-        words[i].getWord();
     }
 }

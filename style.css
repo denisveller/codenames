@@ -27,7 +27,14 @@ th{
     font-size: 10pt;
     text-align: right;
     padding-right: 10px;
-    opacity: 0;
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    float: right;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    border: 1px black solid;
+    display: none;
 }
 .word:focus{
     border: 2px black solid;
