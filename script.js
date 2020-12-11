@@ -1,4 +1,4 @@
-const fileURL = "https://denisveller.github.io/codenames/nounlist.txt";
+const fileURL = "https://denisveller.github.io/codenames/nounlist3.txt";
 let uArr = [];
 fetch(fileURL)
     .then(r => r.text())
